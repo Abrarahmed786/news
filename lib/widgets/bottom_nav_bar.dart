@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:news/screens/home/home.dart';
+import 'package:news/screens/profile/profile.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
     MyHomePage(),
-    MyHomePage()
+    Profile()
   ];
 
   @override

@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
 
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         Text(
@@ -25,7 +25,7 @@ class Profile extends StatelessWidget {
             color: Colors.black.withOpacity(0.7),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CircleAvatar(
@@ -34,21 +34,21 @@ class Profile extends StatelessWidget {
             user.photoURL.toString(),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
-        Divider(),
+        const Divider(),
         Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
-            Icon(
+            const Icon(
               Icons.person_outline,
               size: 30,
               color: Color.fromARGB(255, 185, 146, 192),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text(
@@ -60,18 +60,18 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-        Divider(),
+        const Divider(),
         Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
-            Icon(
+            const Icon(
               Icons.email_outlined,
               size: 30,
               color: Color.fromARGB(255, 185, 146, 192),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text(
@@ -83,18 +83,18 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-        Divider(),
+        const Divider(),
         Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
-            Icon(
+            const Icon(
               Icons.phone_outlined,
               size: 30,
               color: Color.fromARGB(255, 185, 146, 192),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text(
@@ -106,14 +106,17 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-        Divider(),
-        Spacer(),
+        const Divider(),
+        const Spacer(),
         OutlinedButton(
           onPressed: () {
             final provider =
                 Provider.of<GoogleSignInProvider>(context, listen: false);
             provider.logout();
           },
+          style: OutlinedButton.styleFrom(
+            shape: const StadiumBorder(),
+          ),
           child: Text(
             'Logout',
             style: GoogleFonts.poppins(
@@ -122,11 +125,8 @@ class Profile extends StatelessWidget {
               color: Colors.black.withOpacity(0.7),
             ),
           ),
-          style: OutlinedButton.styleFrom(
-            shape: StadiumBorder(),
-          ),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

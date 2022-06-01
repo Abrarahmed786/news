@@ -46,7 +46,7 @@ class MyAppBar extends StatelessWidget {
               width: 15,
             ),
             Text(
-              user.displayName.toString() + '\n' + user.email.toString(),
+              '${user.displayName}\n${user.email}',
               style: const TextStyle(color: Colors.black),
             ),
             const Spacer(),

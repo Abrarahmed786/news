@@ -63,14 +63,14 @@ class TopNews extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: CircleAvatar(
-                                backgroundColor: Colors.white,
+                                backgroundColor: Colors.transparent,
                                 maxRadius: 30,
                                 child: IconButton(
                                   onPressed: () {},
                                   icon: const Icon(
                                     Icons.bookmark_outline,
                                     size: 30,
-                                    color: Colors.black,
+                                    color: Colors.transparent,
                                   ),
                                 ),
                               ),
@@ -87,7 +87,7 @@ class TopNews extends StatelessWidget {
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                "${articles[index].title}\n\n${articles[index].source!.name}",
+                                "${articles[index].title}\n\nSource: ${articles[index].source!.name}\nAuthor: ${articles[index].author.toString()}",
                                 style: GoogleFonts.lato(
                                     fontStyle: FontStyle.italic,
                                     color: Colors.white,
@@ -102,7 +102,6 @@ class TopNews extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Text(articles[index].url.toString()),
                   // Text(articles[index].description.toString()),
                   // Text(articles[index].content.toString()),
                   // Text(articles[index].publishedAt.toString()),

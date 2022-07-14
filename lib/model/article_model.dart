@@ -2,7 +2,7 @@ import 'package:news/model/source_model.dart';
 
 class Article {
   Source? source;
-  // String? author;
+  String? author;
   String? title;
   String? description;
   String? url;
@@ -12,7 +12,7 @@ class Article {
 
   Article({
     this.source,
-    // this.author,
+    this.author,
     this.title,
     this.description,
     this.url,
@@ -23,13 +23,13 @@ class Article {
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       source: Source.fromJson(json['source']),
-      // author: json['author'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      url: json['url'] as String,
-      urlToImage: json['urlToImage'] as String,
-      publishedAt: json['publishedAt'] as String,
-      content: json['content'] as String,
+      author: json['author'].toString(),
+      title: json['title'].toString(),
+      description: json['description'].toString(),
+      url: json['url'].toString(),
+      urlToImage: json['urlToImage'].toString(),
+      publishedAt: json['publishedAt'].toString(),
+      content: json['content'].toString(),
     );
   }
 }

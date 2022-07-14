@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:news/screens/bookmark/books.dart';
 import 'package:news/screens/home/home.dart';
 import 'package:news/screens/profile/profile.dart';
 
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
-    MyHomePage(),
+    Books(),
     Profile()
   ];
 
@@ -51,12 +52,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
               color: Colors.black,
               tabs: const [
                 GButton(
-                  icon: Icons.home_outlined,
-                  text: 'Home',
+                  icon: Icons.newspaper,
+                  text: 'News',
                 ),
                 GButton(
-                  icon: Icons.bookmark_outline,
-                  text: 'Bookmark',
+                  icon: Icons.my_library_books_outlined,
+                  text: 'Books',
                 ),
                 GButton(
                   icon: Icons.person_outline,
